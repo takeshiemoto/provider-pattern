@@ -1,4 +1,4 @@
-import { useContext,VFC } from 'react';
+import { useContext, VFC } from 'react';
 
 import { CounterContext } from '../app';
 
