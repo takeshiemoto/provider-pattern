@@ -30,16 +30,8 @@
     "provider-inject": {
       "tags": []
     },
-    "provider-inject-e2e": {
-      "tags": [],
-      "implicitDependencies": ["provider-inject"]
-    },
     "react-context": {
       "tags": []
-    },
-    "react-context-e2e": {
-      "tags": [],
-      "implicitDependencies": ["react-context"]
     }
   }
 }
