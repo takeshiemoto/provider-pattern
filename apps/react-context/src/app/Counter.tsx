@@ -1,9 +1,10 @@
-import { VFC } from 'react';
+import { memo, VFC } from 'react';
 import { IncrementButton } from './IncrementButton';
 import { CounterView } from './CounterView';
 import { DecrementButton } from './DecrementButton';
 
-export const Counter: VFC = () => {
+export const Counter: VFC = memo(() => {
+  console.log('render:Counter');
   return (
     <div>
       <CounterView />
@@ -11,4 +12,4 @@ export const Counter: VFC = () => {
       <DecrementButton />
     </div>
   );
-};
+});
