@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'provider-pattern-root',
-  templateUrl: './app.component.html',
+  selector: 'app-root',
+  template: `
+    <app-header></app-header>
+    <app-main></app-main>
+    <app-footer></app-footer>
+  `,
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {

@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/angular-di",
       "sourceRoot": "apps/angular-di/src",
-      "prefix": "provider-pattern",
+      "prefix": "app",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
