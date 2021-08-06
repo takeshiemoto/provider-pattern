@@ -5,7 +5,6 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
-    "start:angular": "nx serve angular-di",
     "start:react": "nx serve react-context --port=4201",
     "start:vue": "nx serve provider-inject --port=4202",
     "build": "nx build",

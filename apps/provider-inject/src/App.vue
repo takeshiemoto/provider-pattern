@@ -23,7 +23,6 @@ export default defineComponent({
   },
   setup() {
     provide(counterInjectionToken, useCounter());
-
     return {};
   },
 });

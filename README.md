@@ -14,7 +14,4 @@ yarn run start:react
 
 # Vue
 yarn run start:vue
-
-# Angular
-yarn run start:angular
 ```
