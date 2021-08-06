@@ -1,25 +1,8 @@
-import { Header } from './Header';
-import { Main } from './Main';
-import { Footer } from './Footer';
-import { createContext, useCallback, useState } from 'react';
-
-const useCounter = () => {
-  const [count, setCount] = useState<number>(0);
-
-  const increment = useCallback(() => {
-    setCount(() => count + 1);
-  }, [count]);
-
-  const decrement = useCallback(() => {
-    setCount(() => count - 1);
-  }, [count]);
-
-  return {
-    count,
-    increment,
-    decrement,
-  };
-};
+import { Header } from './components/Header';
+import { Main } from './components/Main';
+import { Footer } from './components/Footer';
+import { createContext } from 'react';
+import { useCounter } from './hooks/useCounter';
 
 export type StoreType = ReturnType<typeof useCounter>;
 
