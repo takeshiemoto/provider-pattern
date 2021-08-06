@@ -1,7 +1,7 @@
 {
   "npmScope": "provider-pattern",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "angular-di": {
+      "tags": []
+    },
     "provider-inject": {
       "tags": []
     },

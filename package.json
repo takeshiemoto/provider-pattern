@@ -5,6 +5,7 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
+    "start:angular": "nx serve angular-di",
     "start:react": "nx serve react-context --port=4201",
     "start:vue": "nx serve provider-inject --port=4202",
     "build": "nx build",
@@ -26,18 +27,35 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "node node_modules/@nx-plus/vue/patch-nx-dep-graph.js"
+    "postinstall": "node node_modules/@nx-plus/vue/patch-nx-dep-graph.js && ngcc --properties es2015 browser module main"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^12.1.0",
+    "@angular/common": "^12.1.0",
+    "@angular/compiler": "^12.1.0",
+    "@angular/core": "^12.1.0",
+    "@angular/forms": "^12.1.0",
+    "@angular/platform-browser": "^12.1.0",
+    "@angular/platform-browser-dynamic": "^12.1.0",
+    "@angular/router": "^12.1.0",
     "core-js": "^3.6.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
+    "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.1.0",
+    "@angular-eslint/eslint-plugin": "~12.3.0",
+    "@angular-eslint/eslint-plugin-template": "~12.3.0",
+    "@angular-eslint/template-parser": "~12.3.0",
+    "@angular/compiler-cli": "^12.1.0",
+    "@angular/language-service": "^12.1.0",
+    "@nrwl/angular": "^12.6.5",
     "@nrwl/cli": "12.6.5",
     "@nrwl/cypress": "12.6.5",
     "@nrwl/eslint-plugin-nx": "12.6.5",

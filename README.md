@@ -1,7 +1,5 @@
 # ProviderPattern
 
-React Context vs Vue provider/inject
-
 ### Setup
 
 ```
@@ -16,4 +14,7 @@ yarn run start:react
 
 # Vue
 yarn run start:vue
+
+# Angular
+yarn run start:angular
 ```
