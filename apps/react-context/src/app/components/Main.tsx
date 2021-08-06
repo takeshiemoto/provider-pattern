@@ -1,4 +1,5 @@
 import { VFC } from 'react';
+
 import { Counter } from './Counter';
 
 export const Main: VFC = () => {

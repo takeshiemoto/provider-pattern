@@ -8,9 +8,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import CounterView from './CounterView.vue';
-import IncrementButton from './IncrementButton.vue';
 import DecrementButton from './DecrementButton.vue';
+import IncrementButton from './IncrementButton.vue';
 
 export default defineComponent({
   name: 'Counter',

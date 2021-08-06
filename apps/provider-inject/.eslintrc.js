@@ -6,7 +6,10 @@ module.exports = {
     'prettier',
   ],
   ignorePatterns: ['!**/*'],
-  rules: {},
+  rules: {
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+  },
   env: {
     node: true,
   },

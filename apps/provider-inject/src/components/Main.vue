@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { defineComponent, onUpdated } from 'vue';
+
 import Counter from './Counter.vue';
 
 export default defineComponent({

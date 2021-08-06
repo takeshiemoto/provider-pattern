@@ -4,6 +4,7 @@
 
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
+
 import { counterInjectionToken } from '../composables/use-counter';
 
 export default defineComponent({

@@ -1,4 +1,5 @@
-import { VFC, useContext } from 'react';
+import { useContext,VFC } from 'react';
+
 import { CounterContext } from '../app';
 
 export const CounterView: VFC = () => {
