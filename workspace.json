@@ -1,6 +1,90 @@
 {
   "version": 2,
   "projects": {
+    "provider-inject": {
+      "projectType": "application",
+      "root": "apps/provider-inject",
+      "sourceRoot": "apps/provider-inject/src",
+      "targets": {
+        "build": {
+          "executor": "@nx-plus/vue:browser",
+          "options": {
+            "dest": "dist/apps/provider-inject",
+            "index": "apps/provider-inject/public/index.html",
+            "main": "apps/provider-inject/src/main.ts",
+            "tsConfig": "apps/provider-inject/tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "mode": "production",
+              "filenameHashing": true,
+              "productionSourceMap": true,
+              "css": {
+                "extract": true,
+                "sourceMap": false
+              }
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nx-plus/vue:dev-server",
+          "options": {
+            "browserTarget": "provider-inject:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "provider-inject:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/provider-inject/**/*.{ts,tsx,vue}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/provider-inject"
+          ],
+          "options": {
+            "jestConfig": "apps/provider-inject/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "provider-inject-e2e": {
+      "root": "apps/provider-inject-e2e",
+      "sourceRoot": "apps/provider-inject-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/provider-inject-e2e/cypress.json",
+            "tsConfig": "apps/provider-inject-e2e/tsconfig.e2e.json",
+            "devServerTarget": "provider-inject:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "provider-inject:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/provider-inject-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
     "react-context": {
       "root": "apps/react-context",
       "sourceRoot": "apps/react-context/src",
@@ -8,7 +92,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/react-context",
             "index": "apps/react-context/src/index.html",
@@ -19,7 +105,9 @@
               "apps/react-context/src/favicon.ico",
               "apps/react-context/src/assets"
             ],
-            "styles": ["apps/react-context/src/styles.css"],
+            "styles": [
+              "apps/react-context/src/styles.css"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -64,12 +152,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/react-context/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/react-context/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/react-context"],
+          "outputs": [
+            "coverage/apps/react-context"
+          ],
           "options": {
             "jestConfig": "apps/react-context/jest.config.js",
             "passWithNoTests": true
@@ -98,7 +190,9 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/react-context-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/react-context-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }

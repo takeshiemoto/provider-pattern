@@ -27,6 +27,13 @@
     ]
   },
   "projects": {
+    "provider-inject": {
+      "tags": []
+    },
+    "provider-inject-e2e": {
+      "tags": [],
+      "implicitDependencies": ["provider-inject"]
+    },
     "react-context": {
       "tags": []
     },
